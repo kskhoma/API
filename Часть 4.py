@@ -49,8 +49,9 @@ def im():
     pygame.display.flip()
 
 
+mouse = pygame.mouse.get_pos()
+
 while True:
-    im()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -120,5 +121,5 @@ while True:
                     with open(map_file, "wb") as file:
                         file.write(response.content)
     screen.blit(pygame.image.load(map_file), (0, 0))
+    im()
     pygame.display.flip()
-    clock.tick(fps)
