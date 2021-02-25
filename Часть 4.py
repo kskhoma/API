@@ -32,7 +32,7 @@ screen = pygame.display.set_mode((600, 450))
 
 
 def load_image(name, colorkey=None):
-    fullname = os.path.join(r'c:\Users\user\PycharmProjects\Решение задач на API Яндекс.Карт', name)
+    fullname = os.path.join('pictures', name)
     if not os.path.isfile(fullname):
         print(f"Файл с изображением '{fullname}' не найден")
         sys.exit()
